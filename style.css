@@ -470,11 +470,11 @@ h4{
 .section-6 input.inputbox {
     margin: 1rem;
     padding: 0.5rem 1.5rem;
-    width: -webkit-fill-available;
+    width: max-content;
     height: 40px;
-    border:0.5px solid;
-    border-radius:50px;
-    font-size:15px;
+    border: 0.5px solid;
+    border-radius: 50px;
+    font-size: 15px;
 }
 
 .section-6 input.subbtn {
@@ -493,7 +493,6 @@ h4{
     outline: none;
     color:#000;
 }
-
 .section-6 input.subbtn:hover {
     transition: 0.2s;
     background: #fff;
