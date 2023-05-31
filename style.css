@@ -531,6 +531,9 @@ footer a.dwd:hover {
     .inpbtn {
         max-width:100%;
     }
+    footer a.dwd {
+        margin-top: 4rem;
+    }
 }   
 @media only screen and (max-width: 800px) {
     .section-4 .part {
@@ -734,7 +737,7 @@ footer a.dwd:hover {
     }
 
     .section-5 .viewimg2 .card:before {
-        content: 'Click Below Image To Preview';
+        content: 'UI Design';
         text-align: center;
         color: #fff;
         display: flex;
