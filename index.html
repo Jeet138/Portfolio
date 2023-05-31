@@ -211,7 +211,11 @@
 
         $(document).ready(function() {
             $('.menu-toggle').click(function() {
-                $('nav').fadeIn();
+                $('nav').fadeToggle(100);
+            });
+
+            $('.close-button').click(function() {
+                $('nav').fadeOut(100);
             });
         });
 
