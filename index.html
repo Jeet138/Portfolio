@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="scripts links/jquery.min.js"></script>
+    <script src="scripts links/ajax.min.js"></script>
+    <script src="scripts links/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>JP_POTFOLIO</title>
 </head>
@@ -20,7 +21,7 @@
             </div>
             <nav>
                 <div class="logo">
-                    <p>Jp</p><div class="close-button">&times;</div>
+                    <img src="logos/pj.png" class="logoimg"><div class="close-button">&times;</div>
                 </div>
                 <div class="navlinks">
                     <ul>
@@ -164,7 +165,6 @@
                     <img src="gp/ISO PRO Instagram-18-05-2022.png" onclick="change(this.src)">
                     <img src="gp/Nova YK11 insta img.png" onclick="change(this.src)">
                     <img src="gp/Vitacore Instagram Post.png" onclick="change(this.src)">
-                    <img src="UItheme/Growindoor.png" onclick="change(this.src)">
                 </div>
                 </div>
             </div>
@@ -207,116 +207,20 @@
             </div>  
         </div>
     </div>
-    <script>
-
-        $(document).ready(function() {
-            $('.menu-toggle').click(function() {
-                $('nav').fadeToggle(100);
-            });
-
-            $('.close-button').click(function() {
-                $('nav').fadeOut(100);
-            });
-        });
-
-        $(document).ready(function() {
-            var nav = $("nav");
-            var navOffsetTop = nav.offset().top;
-            var lastScrollTop = 0;
-
-            $(window).scroll(function() {
-            var scrollPos = $(window).scrollTop();
-            var scrollDirection = scrollPos > lastScrollTop ? "down" : "up";
-            lastScrollTop = scrollPos;
-
-            if (scrollDirection === "down" && scrollPos >= navOffsetTop) {
-                nav.addClass("sticky");
-            } else {
-                nav.removeClass("sticky");
-            }
-            });
-
-            // Add animation classes when adding and removing "sticky" class
-            nav.on("transitionrun", function(event) {
-            if (event.originalEvent.propertyName === "top" && nav.hasClass("sticky")) {
-                nav.addClass("sticky-enter");
-            }
-            });
-
-            nav.on("transitionend", function(event) {
-            if (event.originalEvent.propertyName === "top" && nav.hasClass("sticky")) {
-                nav.removeClass("sticky-enter");
-                nav.addClass("sticky-enter-active");
-            }
-            });
-
-            nav.on("transitionrun", function(event) {
-            if (event.originalEvent.propertyName === "top" && !nav.hasClass("sticky")) {
-                nav.addClass("sticky-leave");
-            }
-            });
-
-            nav.on("transitionend", function(event) {
-            if (event.originalEvent.propertyName === "top" && !nav.hasClass("sticky")) {
-                nav.removeClass("sticky-leave");
-                nav.addClass("sticky-leave-active");
-            }
-            });
-        });
-
-        $(document).ready(function() {
-            var texts=["UI & UX DESIGNER","WEB DESIGNER"] // Array of texts to cycle through
-            var currentIndex = 0; // Current index of the text in the array
-    
-            function rotateText() {
-                var rotateElement = $('.rotate'); // Get the element with class "rotate"
-                var currentText = texts[currentIndex]; // Get the current text from the array
-    
-                rotateElement.fadeOut(500, function() {
-                    rotateElement.text(currentText); // Update the text within the element
-                }).fadeIn(500);
-    
-                currentIndex = (currentIndex + 1) % texts.length; // Update the index for the next text
-            }
-            setInterval(rotateText, 3000); // Call rotateText every 2 seconds (adjust the timing as needed)
-        });
-
-        // $(document).ready(function() {
-        //     var currentSection = 1;
-        //     var totalSections = 5;
-
-        //     var intervalId = setInterval(function() {
-        //         currentSection++;
-        //         if (currentSection <= totalSections) {
-        //         $('html, body').animate({
-        //             scrollTop: $('.section-' + currentSection).offset().top
-        //         }, 1200);
-        //         } else {
-        //         clearInterval(intervalId);
-        //         }
-        //     }, 6000);
-        // });
-
-
-        $(document).ready(function() {
-            $('.box-container').addClass('visible');
-        });
-        const change = src => {
-            document.getElementById('main').src = src
-        }
-
-
-        $(document).ready(function() {
-            $(".card").click(function() {
-                var imageUrl = $(this).find("img").attr("src");
-                $(".popup-image").attr("src", imageUrl);
-                $(".popup-overlay").fadeIn();
-            });
-
-            $(".popup-overlay").click(function() {
-                $(".popup-overlay").fadeOut();
-            });
-        });
-    </script>
+    <footer>  
+        <div class="logo">
+            <img src="logos/pj.png" class="logoimg">
+        </div>      
+        <div class="nortext">
+            <p>© 2023 Jeet-Panchal</p>
+        </div>  
+        <div class="social">
+            <a href="https://www.instagram.com/panchaljeet2/?igshid=MzRlODBiNWFlZA%3D%3D"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/jeet-panchal-356008203"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/Jeet138"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/JeetPan37314869"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="resumee/Jeet Panchal Resume.pdf" class="dwd" download>Download Resume</a>
+        </div>
+    </footer>
 </body>
 </html>

@@ -7,7 +7,9 @@ body {
 html{
     scroll-behavior: smooth;
 }
-
+a{
+    text-decoration:none;
+}
 /* h2{
     font-size:30px!important;
     margin-bottom:6rem!important;
@@ -129,12 +131,8 @@ transition: all 0.3s ease-in;
     padding-left: 0;
     font-size: 14px;
 }
-.logo p {
-    font-size: 20px;
-    padding: 0.2rem;
-    border: 1px solid #42403f;
-    color: #42403f;
-    border-radius: 30px;
+img.logoimg {
+    width: 55px;
 }
 /* Scrollbar css */
 /* width */
@@ -188,8 +186,9 @@ transition: all 0.3s ease-in;
     flex-direction: column;
     top:100px;
 }
-
-  
+.bio span {
+    padding: 0 2rem;
+}  
 .bio span h1 {
     display: inline-block;
     color: #8579ff;
@@ -500,6 +499,34 @@ h4{
     background: #fff;
     color:#42403f;
 }
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+    background:#1a1a1a;
+}
+footer .social {
+    width: unset;
+    margin:1rem;
+}
+footer .nortext {
+    color: #fff;
+    margin:1rem;
+}
+footer  a.dwd {
+    color:#1a1a1a;
+    background:#fff;
+    padding:0.8rem;
+    border-radius:30px;
+    transition: 0.2s;
+}
+footer a.dwd:hover {
+    background: #1a1a1a;
+    border: 1px solid #fff;
+    color: #fff;
+}
 
 @media only screen and (max-width: 600px) {
     .inpbtn {
@@ -533,7 +560,7 @@ h4{
     .section-5 .card img {
         width: 100%;
         height: max-content;
-        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
     .section-3 .row {
         flex-direction: column;
@@ -564,6 +591,23 @@ h4{
     }
     .section-4 .side_view h3 {
         display: none;
+    }
+    .section-4 .side_view img:hover {
+        transform: none;
+    }
+    footer {
+        justify-content: center;
+    }    
+    footer .logo {
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: center;
+    }
+    footer .logo img{
+        width:20%;
+    }
+    .nortext {
+        font-size:20px;
     }
 }
  
@@ -650,7 +694,7 @@ h4{
         cursor: pointer;
     }
     .menu-toggle {
-        position: fixed;
+        position: absolute;
         width: 35px;
         height: 25px;
         cursor: pointer;
