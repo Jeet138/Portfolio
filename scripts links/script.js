@@ -8,13 +8,19 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('.menu-toggle').click(function() {
-        $('nav').fadeIn(200);
+      $('nav').slideToggle('slow', function() {
+        $(this).toggleClass('active');
+      });
     });
-
+  });
+  
+  $(document).ready(function() {
     $('.close-button').click(function() {
-        $('nav').fadeOut(200);
+      $('nav').slideToggle('slow', function() {
+        $(this).removeClass('active');
+      });
     });
-});
+  });  
 
 $(document).ready(function() {
     var nav = $("nav");
