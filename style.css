@@ -527,7 +527,12 @@ footer a.dwd:hover {
     background: #1a1a1a;
     border: 1px solid #fff;
     color: #fff;
-} 
+}
+@media only screen and (max-width: 430px) {
+    .section-6 .inpbtn {
+        max-width: unset;
+    } 
+}    
 @media only screen and (max-width: 600px) {
     .inpbtn {
         max-width:100%;
